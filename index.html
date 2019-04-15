@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600&amp;subset=cyrillic-ext" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="overlay"></div>
+	<header class="header">
+		<div class="container">
+			<div class="header__top">
+				<div class="menuButton">
+					<span class="topLine"></span>
+					<span class="middleLine"></span>
+					<span class="bottomLine"></span>
+				</div>
+				<a href="/" class="header__logo">
+					<img src="img/logo.svg" alt="Логотип">
+				</a>
+				<div class="header__categories">
+					<a href="javascript:void(0)" class="header__category">Женщинам</a>
+					<a href="javascript:void(0)" class="header__category">Мужчинам</a>
+				</div>
+				<div class="header__icon searchButton"></div>
+				<input type="search" placeholder="Поиск товаров" class="header__search">
+				<div class="header__register">
+					<svg role="img" class="header__icon--men header__icon">
+						<use xlink:href="img/sprites/icons.svg#login"></use>
+					</svg>
+					<span class="header__login">Войти</span>
+				</div>
+				<svg role="img" class="header__icon header__icon--like">
+					<use xlink:href="img/sprites/icons.svg#like"></use>
+				</svg>
+				<div class="header__basket">
+					<svg role="img" class="header__icon header__icon--basket">
+						<use xlink:href="img/sprites/icons.svg#busket"></use>
+					</svg>
+					<span class="header__sales">11</span>
+				</div>
+			</div>
+		</div>
+		<div class="header__bottom">
+			<div class="container">
+				<ul class="menu">
+					<li>
+						<a href="javascript:void(0)">Одежда</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">Обувь</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">Сумки и акксессуары</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">Распродажа</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="delivery">
+			<h1 class="delivery__title">Доставка Klothez</h1>
+			<div class="advantages">
+				<div class="container container--small">
+					<h3 class="advantages__subtitle">Узнайте о преимуществах каждого способа доставки и выберите самый удобный</h3>
+					<div class="advantages__flex">
+						<div class="advantages__item">
+							<svg role="img" class="advantages__svg advantages__fitting">
+								<use xlink:href="img/sprites/delivery.svg#fitting"></use>
+							</svg>
+							<span class="advantages__text"> Примерка перед покупкой</span>
+						</div>
+						<div class="advantages__item">
+							<svg role="img" class="advantages__svg advantages__time">
+								<use xlink:href="img/sprites/delivery.svg#time"></use>
+							</svg>
+							<span class="advantages__text"> Выбор даты<br> и времени доставки</span>
+						</div>
+						<div class="advantages__item">
+							<svg role="img" class="advantages__svg advantages__time">
+								<use xlink:href="img/sprites/delivery.svg#pay"></use>
+							</svg>
+							<span class="advantages__text">Оплата наличными или картой при получении</span>
+						</div>
+						<div class="advantages__item">
+							<svg role="img" class="advantages__svg advantages__time">
+								<use xlink:href="img/sprites/delivery.svg#free"></use>
+							</svg>
+							<span class="advantages__text">Возможность бесплатной доставки</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="more">
+				<div class="container container--small">
+					<h3 class="more__inform">Узнать подробнее о способах, сроках и ценах доставки в вашем городе</h3>
+					<input name="city" class="more__city" placeholder="Санкт-Петербург">
+					<button class="more__button button">Узнать</button>
+				</div>
+			</div>
+			<div class="ways">
+				<div class="container container--small">
+					<h2 class="ways__header">Способы доставки</h2>
+					<div class="ways__flex">
+						<div class="ways__item">
+							<img src="img/courier.jpg" alt="Доставка курьера" class="ways__img">
+							<h2 class="ways__title">Курьерская доставка</h2>
+							<span class="ways__description">Вы сами решаете, куда и когда доставить заказ. И сами выбираете, какие вещи оплатить, а какие – вернуть торговому представителю.
+							</span>
+							<p class="ways__benefits">Подходящая дата и время доставки</p>
+							<p class="ways__benefits">Разные интервалы доставки: от 15 минут</p>
+							<p class="ways__benefits">В 150+ городах доставка на следующий день</p>
+						</div>
+						<div class="ways__item">
+							<img src="img/yourself.jpg" alt="Доставка курьера" class="ways__img">
+							<h2 class="ways__title">Самовывоз</h2>
+							<span class="ways__description">Хотите забрать заказ самостоятельно? Оформите доставку в один из пунктов выдачи заказов.
+							</span>
+							<p class="ways__benefits">Более 6 000 пунктов по всей стране</p>
+							<p class="ways__benefits">Удобные часы работы и расположение</p>
+							<p class="ways__benefits">Возможность выбрать пункт с примерочными</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="information">
+				<div class="container container--small">
+					<h2 class="information__title">Вопросы и ответы</h2>
+					<div class="information__item">
+						<span class="information__quest">Что если я не могу определиться с размером?</span>
+						<svg role="img" class="information__plus">
+							<use xlink:href="img/sprites/icons.svg#plus"></use>
+						</svg>
+						<span class="information__answer">Нет. Торговый представитель приедет в тот временной интервал, который вы указали при оформлении заказа. Если вы точно знаете, в какое время нужен заказ, закажите доставку в течение выбранного часа или 15-ти минут.</span>
+					</div>
+					<div class="information__item">
+						<span class="information__quest">Если мне ничего не подошло?</span>
+						<svg role="img" class="information__plus">
+							<use xlink:href="img/sprites/icons.svg#plus"></use>
+						</svg>
+						<span class="information__answer">Нет. Торговый представитель приедет в тот временной интервал, который вы указали при оформлении заказа. Если вы точно знаете, в какое время нужен заказ, закажите доставку в течение выбранного часа или 15-ти минут.</span>
+					</div>
+					<div class="information__item mobileHide">
+						<span class="information__quest">Как получить бесплатную доставку с примеркой?</span>
+						<svg role="img" class="information__plus">
+							<use xlink:href="img/sprites/icons.svg#plus"></use>
+						</svg>
+						<span class="information__answer">Нет. Торговый представитель приедет в тот временной интервал, который вы указали при оформлении заказа. Если вы точно знаете, в какое время нужен заказ, закажите доставку в течение выбранного часа или 15-ти минут.</span>
+					</div>
+					<div class="information__item information__item--active">
+						<span class="information__quest">Мне придется ждать торгового представителя целый день?</span>
+						<svg role="img" class="information__plus">
+							<use xlink:href="img/sprites/icons.svg#plus"></use>
+						</svg>
+						<span class="information__answer">Нет. Торговый представитель приедет в тот временной интервал, который вы указали при оформлении заказа. Если вы точно знаете, в какое время нужен заказ, закажите доставку в течение выбранного часа или 15-ти минут.</span>
+					</div>
+					<div class="information__item mobileHide">
+						<span class="information__quest">Где должен находиться торговый представитель, пока я примеряю одежду?</span>
+						<svg role="img" class="information__plus">
+							<use xlink:href="img/sprites/icons.svg#plus"></use>
+						</svg>
+						<span class="information__answer">Нет. Торговый представитель приедет в тот временной интервал, который вы указали при оформлении заказа. Если вы точно знаете, в какое время нужен заказ, закажите доставку в течение выбранного часа или 15-ти минут.</span>
+					</div>
+					<div class="information__item mobileHide">
+						<span class="information__quest">Что такое постамат?</span>
+						<svg role="img" class="information__plus">
+							<use xlink:href="img/sprites/icons.svg#plus"></use>
+						</svg>
+						<span class="information__answer">Нет. Торговый представитель приедет в тот временной интервал, который вы указали при оформлении заказа. Если вы точно знаете, в какое время нужен заказ, закажите доставку в течение выбранного часа или 15-ти минут.</span>
+					</div>
+					<button class="button information__button">Задать вопрос</button>
+				</div>
+			</div>
+		</div>
+	</main>
+	<section class="partners">
+		<div class="container">
+			<h2 class="partners__title">Наши партнеры</h2>
+			<div class="partners__flex">
+				<a href="javascript:void(0)" class="partners__item">
+					<img src="img/partner_1.png" alt="Наши партнеры" class="partners__img">
+				</a>
+				<a href="javascript:void(0)" class="partners__item">
+					<img src="img/partner_2.png" alt="Наши партнеры" class="partners__img">
+				</a>
+				<a href="javascript:void(0)" class="partners__item">
+					<img src="img/partner_3.png" alt="Наши партнеры" class="partners__img">
+				</a>
+				<a href="javascript:void(0)" class="partners__item">
+					<img src="img/partner_4.png" alt="Наши партнеры" class="partners__img">
+				</a>
+				<a href="javascript:void(0)" class="partners__item">
+					<img src="img/partner_5.png" alt="Наши партнеры" class="partners__img">
+				</a>
+				<a href="javascript:void(0)" class="partners__item">
+					<img src="img/partner_6.png" alt="Наши партнеры" class="partners__img">
+				</a>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__flex">
+				<div class="contacts">
+					<div class="contacts__top">
+						<span class="contacts__address">
+							Москва, ул. Авиамоторная дом 50 с2	
+						</span>
+						<a href="tel:+78002007456" class="contacts__phone">8 800 200-7456</a>
+						<a href="mailto:info@klothez.ru" class="contacts__mail">info@klothez.ru</a>
+					</div>
+					<div class="contacts__bottom">
+						<span class="contacts__mode">Работаем без выходных <span class="contacts__mode--normal">с 10.00 до 20.00, ежедневно</span></span>
+					</div>
+				</div>
+				<div class="footer__wrap">
+					<ul class="footer__menu footer__menu--left">
+						<li>
+							<a href="javascript:void(0)">О компании</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">Контакты</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">Доставка и оплата</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">Гарантии</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">Договор оферты</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">Политика безопасности</a>
+						</li>
+					</ul>
+					<ul class="footer__menu footer__menu--right">
+						<li>
+							<a href="javascript:void(0)">Новости</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">Акции</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">Хиты продаж</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">Блог</a>
+						</li>
+					</ul>
+				</div>
+				<div class="socials">
+					<h4 class="footer__title">Мы в социальных сетях</h4>
+					<div class="socials__link">
+						<a href="javascript:void(0)" class="socials__item">
+							<svg class="socials__svg socials__svg--facebook" role="img">
+								<use xlink:href="img/sprites/socials.svg#facebook"></use>
+							</svg>
+						</a>
+						<a href="javascript:void(0)" class="socials__item">
+							<svg class="socials__svg socials__svg--instagram" role="img">
+								<use xlink:href="img/sprites/socials.svg#instagram"></use>
+							</svg>
+						</a>
+						<a href="javascript:void(0)" class="socials__item">
+							<svg class="socials__svg socials__svg--google" role="img">
+								<use xlink:href="img/sprites/socials.svg#google"></use>
+							</svg>
+						</a>
+						<a href="javascript:void(0)" class="socials__item">
+							<svg class="socials__svg socials__svg--youtube" role="img">
+								<use xlink:href="img/sprites/socials.svg#youtube"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="pay">
+					<h4 class="footer__title">Принимаем к оплате</h4>
+					<div class="pay__cards">
+						<svg class="pay__item pay__item--mastercard" role="img">
+							<use xlink:href="img/sprites/payway.svg#mastercard"></use>
+						</svg>
+						<svg class="pay__item pay__item--visa" role="img">
+							<use xlink:href="img/sprites/payway.svg#visa"></use>
+						</svg>
+						<svg class="pay__item pay__item--mir" role="img">
+							<use xlink:href="img/sprites/payway.svg#mir"></use>
+						</svg>
+					</div>
+					<a href="javascript:void(0)" class="pay__inform">Подробнее об оплате</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="libs/jquery-3.3.1.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html> 

@@ -1,0 +1,624 @@
+@import "variables"
+
+html
+	font-size: 10px
+
+*
+	box-sizing: border-box
+
+body
+	padding: 0
+	margin: 0
+	background-color: #ffffff
+	color: #000000
+	font-family: 'IBM Plex Sans', Arial, sans-serif
+	font-size: 12px
+	&.active
+		overflow: hidden
+
+input
+	&::-webkit-input-placeholder
+		color: #000000
+	&::-moz-placeholder
+		color: #000000
+	&:-moz-placeholder
+		color: #000000
+	&:-ms-input-placeholder
+		color: #000000
+
+
+a
+	text-decoration: none
+	color: #000000
+
+p
+	padding: 0
+	margin: 0
+
+ul
+	padding: 0
+	margin: 0
+
+li
+	padding: 0
+	margin: 0
+	list-style-type: none
+
+select
+	appearance: none
+
+.container
+	max-width: 1300px
+	width: 100%
+	margin: 0 auto
+	height: 100%
+	&--small
+		width: 880px
+		margin: 0 auto
+		@media screen and (max-width: ($laptop))
+			width: 650px
+		@media screen and (max-width: ($tablet))
+			width: 430px
+		@media screen and (max-width: ($mobile))
+			width: 100%
+			padding: 0 16px
+	@media screen and (max-width: ($laptop))
+		max-width: 800px
+	@media screen and (max-width: ($tablet))
+		max-width: 100%
+		padding: 0 16px
+
+.button
+	background-color: $btn_color
+	font-size: 14px
+	font-weight: 600
+	text-transform: uppercase
+	border-radius: 4px
+	padding: 15px 30px
+	outline: none
+	border: none
+	cursor: pointer
+	letter-spacing: 1px
+	&:hover
+		background-color: darken($btn_color, 15%)
+		@media screen and (max-width: ($mobile))
+			background-color: $btn_color
+
+
+.overlay
+	width: 100%
+	height: 100%
+	background-color: #ffffff
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 10
+	display: none
+	&.active
+		display: block
+
+.menuButton
+	margin-right: 15px
+	display: none
+	span
+		background-color: #000000
+		display: block
+		height: 2px
+		width: 18px
+		margin-bottom: 3px
+		transition: all 0.5s
+	&.activeButton
+		z-index: 10
+		position: fixed
+		.topLine
+			transform: translateY(5px) rotate(45deg)
+		.middleLine
+			transform: scale(0)
+		.bottomLine
+			transform: translateY(-5px) rotate(-45deg)
+	@media screen and (max-width: ($mobile))
+		display: block
+
+.mobileHide
+	@media screen and (max-width: ($mobile))
+		display: none
+
+.header
+	letter-spacing: 1px
+	@media screen and (max-width: ($mobile))
+		border-bottom: 1px solid $line_color
+	&__top
+		display: flex
+		justify-content: space-between
+		padding: 25px 0
+		align-items: center
+		@media screen and (max-width: ($small_mobile))
+			padding: 20px 0
+	&__bottom
+		border-bottom: 1px solid $line_color
+		border-top: 1px solid $line_color
+		padding: 15px 0 20px
+		@media screen and (max-width: ($mobile))
+			border: none
+			padding: 0
+	&__logo
+		display: inline-block
+		font-size: 0
+		margin-right: 20px
+		@media screen and (max-width: ($mobile))
+			flex-grow: 1
+			margin-right: 0
+		> img
+			@media screen and (max-width: ($small_mobile))
+				width: 86px
+	&__categories
+		@media screen and (max-width: ($tablet))
+			flex-grow: 1
+		@media screen and (max-width: ($mobile))
+			display: none
+	&__category
+		font-size: 12px
+		margin: 0 10px
+		text-transform: uppercase
+		position: relative
+		&::after
+			transition: all 0.2s
+			content: ""
+			height: 2px
+			width: 100%
+			position: absolute
+			bottom: -3px
+			left: 0
+			background-color: #000000
+			opacity: 0
+		&:hover
+			font-weight: 600
+			&::after
+				content: ""
+				opacity: 1
+	&__search
+		background: $search_color url("../img/search.svg") no-repeat 20px 50%
+		border: none
+		outline: none
+		max-width: 766px
+		width: 100%
+		padding: 1.5rem 2rem 1.5rem 4.4rem
+		text-transform: uppercase
+		font-size: 12px
+		transition: all 0.2s
+		border-radius: 4px
+		&:focus
+			background: none
+			border: 1px solid #000000
+			padding-left: 20px
+		@media screen and (max-width: ($laptop))
+			max-width: 300px
+		@media screen and (max-width: ($tablet))
+			max-width: 200px
+		@media screen and (max-width: ($small_tablet))
+			display: none
+	&__register
+		cursor: pointer
+		position: relative
+	&__login
+		text-transform: uppercase
+		font-size: 12px
+		padding: 13px 10px 13px 30px
+		letter-spacing: 1px
+		border: 1px solid rgba(0, 0, 0, 0)
+		&:hover
+			border: 1px solid rgba(0, 0, 0, 1)
+		@media screen and (max-width: ($small_mobile))
+			display: none
+	&__icon
+		width: 16px
+		height: 14px
+		margin: 0 10px
+		display: none
+		@media screen and (max-width: ($small_mobile))
+			display: inline-block
+		&--men
+			display: inline-block
+			position: absolute
+			top: 1px
+			@media screen and (max-width: ($small_mobile))
+				position: static
+		&--basket
+			margin-right: 0
+	&__sales
+		font-size: 9px
+		display: inline-block
+		vertical-align: top
+		display: none
+		@media screen and (max-width: ($small_mobile))
+			display: inline-block
+	&__basket
+		font-size: 0
+
+.searchButton
+	width: 16px
+	height: 16px
+	background: url("../img/search.svg") no-repeat 0 0
+	display: none
+	@media screen and (max-width: ($small_tablet))
+		display: inline-block
+
+
+.menu
+	display: flex
+	flex-wrap: wrap
+	letter-spacing: 1px
+	&.activeMenu
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		position: fixed
+		top: 10%
+		left: 50%
+		transform: translateX(-50%)
+		align-items: center
+		z-index: 20
+		width: 100%
+		li
+			margin-bottom: 20px
+			a
+				font-size: 18px
+				margin-right: 0
+	li
+		a
+			text-transform: uppercase
+			margin-right: 30px
+			&:hover
+				color: $active_color
+				font-weight: 600
+	@media screen and (max-width: ($mobile))
+		display: none	
+
+.delivery
+	display: flex
+	flex-direction: column
+	align-items: center
+	&__title
+		margin: 50px 0 20px
+		font-size: 36px
+		font-weight: 600
+		padding: 0
+		@media screen and (max-width: ($mobile))
+			font-size: 26px
+			margin: 20px 0 15px
+
+.advantages
+	text-align: center
+	width: 100%
+	&__subtitle
+		font-size: 18px
+		line-height: 1.56
+		font-weight: normal
+		padding: 0
+		margin: 0
+		@media screen and (max-width: ($laptop))
+			padding: 0 50px
+		@media screen and (max-width: ($mobile))
+			padding: 0
+	&__flex
+		display: flex
+		justify-content: space-between
+		margin: 55px 0
+		@media screen and (max-width: ($laptop))
+			justify-content: space-around
+		@media screen and (max-width: ($tablet))
+			flex-wrap: wrap
+			margin: 30px 0
+	&__text
+		font-size: 14px
+		font-weight: 600
+		line-height: 1.29
+		margin-top: 20px
+		display: block
+	&__item	
+		text-align: center
+		margin: 20px 10px
+		max-width: 200px
+		width: 100%
+		@media screen and (max-width: ($tablet))
+			max-width: 150px
+		@media screen and (max-width: ($small_mobile))
+			max-width: 134px
+			margin: 20px 0
+	&__svg
+		height: 68px
+		width: 73px
+		@media screen and (max-width: ($small_mobile))
+			height: 45px
+			width: 50px
+
+
+.more
+	padding: 25px 0
+	background-color: $search_color
+	width: 100%
+	text-align: center
+	font-size: 0
+	@media screen and (max-width: ($mobile))
+		margin-top: 10px
+	&__inform
+		font-size: 18px
+		font-weight: 600
+		line-height: 1.33
+		margin: 0 0 20px
+	&__city
+		display: inline-block
+		padding: 13px 10px
+		max-width: 270px
+		width: 100%
+		font-size: 14px
+		background-color: #ffffff
+		border: 1px solid $line_color
+		border-radius: 4px
+		text-align: left
+		font-family: 'IBM Plex Sans', Arial, sans-serif
+		&:focus
+			border: 1px solid #000000
+			outline: none
+			@media screen and (max-width: ($mobile))
+				border-right: none
+		@media screen and (max-width: ($tablet))
+			max-width: 200px
+		@media screen and (max-width: ($mobile))
+			max-width: 160px
+			border-radius: 4px 0 0 4px
+			border-right: none
+	&__button
+		margin-left: 10px
+		@media screen and (max-width: ($mobile))
+			margin: 0
+			padding: 15px 23px
+			letter-spacing: 0.86px
+			border-radius: 0 4px 4px 0
+	
+.ways
+	margin-top: 60px
+	@media screen and (max-width: ($mobile))
+		margin-top: 30px
+	&__header
+		padding: 0
+		margin-bottom: 25px
+		font-size: 18px
+		font-weight: 600
+		letter-spacing: 1px
+		text-align: center
+		text-transform: uppercase
+	&__flex
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin: 0 -10px
+		@media screen and (max-width: ($laptop))
+			flex-direction: column
+			align-items: center
+	&__item
+		max-width: 420px
+		width: 100%
+		margin: 0 10px 20px
+		@media screen and (max-width: ($mobile))
+			max-width: 269px
+	&__img
+		width: 420px
+		@media screen and (max-width: ($mobile))
+			width: 269px
+	&__title
+		margin: 15px 0 10px
+		padding: 0
+		font-size: 24px
+		line-height: 1.25
+		font-weight: 600
+	&__description
+		font-size: 14px
+		line-height: 1.43
+		display: block
+		margin-bottom: 5px
+	&__benefits
+		font-size: 14px
+		line-height: 1.43
+		padding-left: 30px
+		display: inline-block
+		margin: 5px 0 
+		background: url("../img/check.svg") no-repeat 6px 3px
+
+.information
+	margin-top: 40px
+	&__title
+		margin-bottom: 25px
+		padding: 0
+		font-size: 18px
+		text-transform: uppercase
+		font-weight: 600
+	&__item
+		cursor: pointer
+		position: relative
+		padding: 2rem 0
+		border-bottom: 1px solid $line_color
+		border-top: 1px solid $line_color
+		&--active
+			> .information__answer
+				display: block
+			> .information__plus
+				transform: rotate(45deg)
+	&__quest
+		font-size: 14px
+		font-weight: 600
+		line-height: 20px
+		display: inline-block
+		padding-right: 30px
+	&__answer
+		display: none
+		padding-top: 10px
+		font-size: 14px
+		line-height: 1.5
+	&__plus
+		transition: 0.3s
+		position: absolute
+		top: 2.5rem
+		right: 0
+		width: 17px
+		height: 17px
+	&__button
+		margin: 30px 0 60px
+		@media screen and (max-width: ($mobile))
+			letter-spacing: 0.86px
+			margin-bottom: 20px 0 40px
+
+.partners
+	padding: 55px 0
+	border-top: 1px solid $line_color
+	border-bottom: 1px solid $line_color
+	@media screen and (max-width: ($mobile))
+		padding: 25px 0 40px
+	&__title
+		padding: 0
+		margin-bottom: 20px
+		font-size: 18px
+		text-transform: uppercase
+		font-weight: 600
+		letter-spacing: 1px
+		text-align: center
+	&__flex
+		display: flex
+		justify-content: center
+		align-items: center
+		margin: 0 -10px 45px
+		@media screen and (max-width: ($laptop))
+			flex-wrap: wrap
+			margin-bottom: 20px
+		@media screen and (max-width: ($mobile))
+			justify-content: space-around
+			margin-bottom: 0
+	&__item
+		max-width: 199px
+		width: 100%
+		text-align: center
+		vertical-align: middle
+		margin: 0 10px
+		display: inline-block
+		@media screen and (max-width: ($laptop))
+			margin-bottom: 10px
+		@media screen and (max-width: ($tablet))
+			max-width: 150px
+		@media screen and (max-width: ($mobile))
+			max-width: 75px
+	&__img
+		display: inline-block
+		width: 75px
+
+.footer
+	padding: 55px 0
+	line-height: 1.5
+	@media screen and (max-width: ($small_tablet))
+		padding: 20px 0
+		text-align: center
+	&__flex
+		display: flex
+		justify-content: space-between
+		@media screen and (max-width: ($laptop))
+			flex-wrap: wrap
+		@media screen and (max-width: ($small_tablet))
+			flex-direction: column
+			align-items: center
+	&__wrap
+		@media screen and (max-width: ($small_tablet))
+			text-align: left
+			order: 0
+			margin-bottom: 50px
+	&__menu
+		display: inline-block
+		li 
+			a
+				display: block
+				text-decoration: underline
+				padding-bottom: 5px
+				&:hover
+					text-decoration: none
+					color: $active_color
+		&--right
+			vertical-align: top
+	&__title
+		padding: 0
+		margin: 0 0 14px
+		font-size: 14px
+		font-weight: 600
+		line-height: 1.36
+
+.contacts
+	&__top
+		margin-bottom: 20px
+	&__address
+		display: block
+	&__phone
+		display: block
+		font-weight: 600
+		padding: 5px 0
+		&:hover
+			color: $active_color
+	&__mail
+		text-decoration: underline
+		&:hover
+			color: $active_color
+	&__mode
+		font-weight: 600
+		font-size: 14px
+		&--normal
+			font-weight: normal
+			font-size: 12px
+			display: block
+	@media screen and (max-width: ($small_tablet))
+		order: 3
+		margin-bottom: 20px
+
+
+.socials
+	&__item
+		display: inline-block
+		margin-right: 30px
+		transition: all 0.2
+		&:hover
+			transform: scale(1.1)
+		@media screen and (max-width: ($small_tablet))
+			margin: 0 15px
+	&__svg
+		height: 18px
+		&--facebook
+			width: 9px
+		&--instagram
+			width: 18px
+		&--google
+			width: 28px
+		&--youtube
+			width: 23px
+	@media screen and (max-width: ($small_tablet))
+		order: 1
+		margin-bottom: 20px
+
+
+.pay
+	&__inform
+		text-decoration: underline
+		display: inline-block
+		margin-top: 10px
+		&:hover
+			color: $active_color
+	&__item
+		height: 18px
+		margin-right: 20px
+		@media screen and (max-width: ($small_tablet))
+			margin: 0 10px
+		&--mastercard
+			width: 28px
+		&--visa
+			width: 48px
+		&--mir
+			width: 57px
+	@media screen and (max-width: ($laptop))
+		flex-grow: 1
+	@media screen and (max-width: ($small_tablet))
+		order: 2
+		margin-bottom: 20px

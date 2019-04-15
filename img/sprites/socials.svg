@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="facebook" viewBox="0 0 9 16">
+    <path fill="#000" fill-rule="evenodd" d="M8.8 0H6.4a4 4 0 0 0-4 4v2.4H0v3.2h2.4V16h3.2V9.6H8l.8-3.2H5.6V4a.8.8 0 0 1 .8-.8h2.4V0z"/>
+</symbol><symbol id="google" viewBox="0 0 28 16">
+    <g fill="#000" fill-rule="nonzero">
+        <path d="M8 6.4v3.2h4.526A4.81 4.81 0 0 1 8 12.8 4.806 4.806 0 0 1 3.2 8c0-2.646 2.154-4.8 4.8-4.8 1.147 0 2.251.411 3.109 1.158l2.102-2.412A7.928 7.928 0 0 0 8 0C3.589 0 0 3.589 0 8s3.589 8 8 8 8-3.589 8-8V6.4H8zM19 8.2v-2h8.4v2z"/>
+        <path d="M22.2 3h2v8.4h-2z"/>
+    </g>
+</symbol><symbol id="instagram" viewBox="0 0 18 18">
+    <g fill="none" fill-rule="evenodd" stroke="#000" stroke-width="2">
+        <rect width="16" height="16" x="1" y="1" rx="5"/>
+        <path d="M11.61 8.58a2.6 2.6 0 1 0-5.143.762 2.6 2.6 0 0 0 5.144-.762z"/>
+    </g>
+</symbol><symbol id="youtube" viewBox="0 0 23 16">
+    <path fill="#000" fill-rule="nonzero" d="M21.527 1.373C20.718.398 19.225 0 16.374 0H6.025C3.11 0 1.591.424.785 1.462 0 2.475 0 3.967 0 6.032v3.936C0 13.968.932 16 6.025 16h10.35c2.472 0 3.842-.351 4.728-1.212.91-.883 1.297-2.324 1.297-4.82V6.032c0-2.178-.06-3.679-.873-4.659zm-7.146 7.17l-4.7 2.493a.713.713 0 0 1-.709-.022.736.736 0 0 1-.348-.628v-4.97c0-.256.132-.493.347-.626a.713.713 0 0 1 .709-.024l4.7 2.477c.238.126.388.376.389.65 0 .273-.15.524-.388.65z"/>
+</symbol></svg>
